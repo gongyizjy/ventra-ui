@@ -10,15 +10,16 @@
   "files": [
     "dist"
   ],
-"main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-      
-    }
+      "require": "./dist/index.cjs"
+
+    },
+    "./dist/index.css": "./dist/index.css"
   },
   "license": "MIT",
   "devDependencies": {
