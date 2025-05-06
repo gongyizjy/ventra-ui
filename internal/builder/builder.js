@@ -42,7 +42,8 @@ export async function build(relativePath) {
     plugins: [sassPlugin()],
     target: "es2022",
     outdir: "dist",
-    // minify: true,
+    outExtension: { ".js": ".cjs" },
+    minify: true,
   };
   tasks.push(
     // @ts-ignore
