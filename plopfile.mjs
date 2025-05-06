@@ -19,11 +19,15 @@ export default function (plop) {
         path: "packages/react/{{kebabCase name}}/eslint.config.mjs",
         templateFile: "template/component/eslint.config.mjs.hbs",
       },
-      // eslint
       {
         type: "add",
         path: "packages/react/{{kebabCase name}}/tsconfig.json",
         templateFile: "template/component/tsconfig.json.hbs",
+      },
+      {
+        type: "add",
+        path: "packages/react/{{kebabCase name}}/README.md",
+        templateFile: "template/component/README.md.hbs", 
       },
       {
         type: "add",

@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import { Button } from 'ventra-ui'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import { Button } from '@ventra-ui/react-button'
 import './App.css'
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <Button />
+        <Button>Button</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
