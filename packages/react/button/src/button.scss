@@ -1,5 +1,193 @@
-$btn-color: #f45;
-.btn{
-  background-color: $btn-color;
+:root {
+  --ventra-button-content-font-size: 14px;
+  --ventra-button-content-font-size-lg: 16px;
+  --ventra-button-font-weight: 400;
+  --ventra-button-content-font-size-sm: 12px;
+  --ventra-control-height: 32px;
+  --ventra-control-height-sm: 24px;
+  --ventra-control-height-lg: 40px;
+  --ventra-button-padding-inline: 15px;
+  --ventra-button-padding-inline-lg: 15px;
+  --ventra-button-padding-inline-sm: 7px;
+  --ventra-line-width: 1px;
+  --ventra-line-type: solid;
+  --ventra-margin-xs: 8px;
+  --ventra-motion-duration-mid: 0.2s;
+  --ventra-motion-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ventra-color-text: rgba(0, 0, 0, 0.88);
+  --ventra-font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --ventra-border-radius: 6px;
+  --ventra-border-radius-sm: 4px;
+  --ventra-border-radius-lg: 8px;
+  --ventra-color-primary: #1677ff;
+  --ventra-color-primary-hover: #4096ff;
+  --ventra-button-primary-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+  --verntra-button-primary-color: #ffffff;
+  --ventra-button-default-border-color: #d9d9d9;
+  --ventra-button-default-bg: #ffffff;
+  --ventra-button-default-color: rgba(0, 0, 0, 0.88);
+  --ventra-button-default-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+  --ant-button-default-hover-color: #4096ff;
+  --ant-button-default-hover-border-color: #4096ff;
+  --ant-button-default-hover-bg: #ffffff;
+  --ventra-button-text-color: rgba(0, 0, 0, 0.88);
+  --ventra-button-text-text-hover-color: rgba(0, 0, 0, 0.88);
+  --ventra-button-text-hover-bg: rgba(0, 0, 0, 0.04);
+  --ventra-color-link: #1677ff;
+  --ventra-color-link-hover: #69b1ff;
+  --ventra-button-border-color-disabled: #d9d9d9;
+  --ventra-color-text-disabled: rgba(0, 0, 0, 0.25);
+  --ventra-color-bg-container-disabled: rgba(0, 0, 0, 0.04);
+}
 
+.ventra-btn {
+  outline: none;
+  border: none;
+  display: inline-flex;
+  gap: var(--ventra-margin-xs);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: var(--ventra-control-height);
+  padding: 0 var(--ventra-button-padding-inline);
+  font-size: var(--ventra-button-content-font-size);
+  font-weight: var(--ventra-button-font-weight);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  border: var(--ventra-line-width) var(--ventra-line-type) transparent;
+  transition: all var(--ventra-motion-duration-mid)
+    var(--ventra-motion-ease-in-out);
+  touch-action: manipulation;
+  color: var(--ventra-color-text);
+  box-sizing: border-box;
+  border-radius: var(--ventra-border-radius);
+  font-family: var(--ventra-font-family);
+  background-color: #ffffff;
+}
+
+.ventra-btn-primary {
+  color: var(--ventra-color-primary);
+  box-shadow: var(--ventra-button-primary-shadow);
+}
+.ventra-btn-color-primary {
+  color: var(--ventra-color-primary);
+  box-shadow: var(--ventra-button-primary-shadow);
+}
+
+.ventra-btn-variant-solid {
+  background-color: var(--ventra-color-primary);
+  color: var(--verntra-button-primary-color);
+}
+
+.ventra-btn-variant-solid:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  color: var(--ventra-color-text-disabled);
+  background-color: var(--ventra-color-bg-container-disabled);
+  border-color: var(--ventra-button-border-color-disabled);
+}
+
+.ventra-btn-variant-solid:not(:disabled):not(.ventra-btn-disabled):hover {
+  color: var(--verntra-button-primary-color);
+  background-color: var(--ventra-color-primary-hover);
+}
+
+.ventra-btn-default {
+  box-shadow: var(--ventra-button-default-shadow);
+  color: var(--ventra-button-default-color);
+}
+
+.ventra-btn-color-default.ventra-btn-variant-dashed {
+  border-style: dashed;
+}
+
+.ventra-btn-variant-outlined,
+.ventra-btn-variant-dashed {
+  border-color: var(--ventra-button-default-border-color);
+  background-color: var(--ventra-button-default-bg);
+}
+
+.ventra-btn-variant-outlined:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  color: var(--ventra-color-text-disabled);
+  background-color: var(--ventra-color-bg-container-disabled);
+  border-color: var(--ventra-button-border-color-disabled);
+}
+
+.ventra-btn-variant-dashed:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  color: var(--ventra-color-text-disabled);
+  background-color: var(--ventra-color-bg-container-disabled);
+  border-color: var(--ventra-button-border-color-disabled);
+}
+
+.ventra-btn-variant-outlined:not(:disabled):hover,
+.ventra-btn-variant-dashed:not(:disabled):hover {
+  color: var(--ant-button-default-hover-color);
+  border-color: var(--ant-button-default-hover-border-color);
+  background: var(--ant-button-default-hover-bg);
+}
+
+.ventra-btn-text {
+  box-shadow: none;
+  color: var(--ventra-button-text-color);
+}
+
+.ventra-btn-variant-text:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  color: var(--ventra-color-text-disabled);
+  background-color: var(--ventra-color-bg-container-disabled);
+  border-color: var(--ventra-button-border-color-disabled);
+}
+
+.ventra-btn-variant-text:not(:disabled):hover {
+  color: var(--ventra-button-text-text-hover-color);
+  background: var(--ventra-button-text-hover-bg);
+}
+
+.ventra-btn-link {
+  color: var(--ventra-color-link);
+  box-shadow: none;
+}
+.ventra-btn-variant-link {
+  color: var(--ventra-color-link);
+  box-shadow: none;
+}
+
+.ventra-btn-color-link.ventra-btn-variant-link {
+  color: var(--ventra-color-link);
+  box-shadow: none;
+}
+
+.ventra-btn-variant-link:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  color: var(--ventra-color-text-disabled);
+  background-color: var(--ventra-color-bg-container-disabled);
+  border-color: var(--ventra-button-border-color-disabled);
+}
+
+.ventra-btn-color-link.ventra-btn-variant-link:not(:disabled):hover {
+  color: var(--ventra-color-link-hover);
+}
+
+.ventra-btn-lg {
+  height: var(--ventra-control-height-lg);
+  padding: 0 var(--ventra-button-padding-inline-lg);
+  font-size: var(--ventra-button-content-font-size-lg);
+  border-radius: var(--ventra-border-radius-lg);
+}
+
+.ventra-btn-sm {
+  height: var(--ventra-control-height-sm);
+  padding: 0 var(--ventra-button-padding-inline-sm);
+  font-size: var(--ventra-button-content-font-size-sm);
+  border-radius: var(--ventra-border-radius-sm);
 }
