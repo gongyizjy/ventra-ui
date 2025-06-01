@@ -47,7 +47,7 @@ export async function build(relativePath) {
   };
   tasks.push(
     // @ts-ignore
-    esbuid.build(esbuildConfig).then(() => console.log("ESBuild done!"))
+    esbuid.build(esbuildConfig).then(() => console.log("CJSBuild done!"))
   );
   tasks.push(
     esbuid
